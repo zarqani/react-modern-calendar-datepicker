@@ -134,7 +134,8 @@ const Header = ({
           <button
             onClick={onMonthSelect}
             type="button"
-            className={`Calendar__monthText ${isMonthSelectorOpen ? 'Calendar__TextOpen' : ''}`}
+            className="Calendar__monthText"
+            data-status={isMonthSelectorOpen ? 'Calendar__TextOpen' : ''}
             aria-label={isMonthSelectorOpen ? closeMonthSelector : openMonthSelector}
             tabIndex={isActiveMonth ? '0' : '-1'}
             {...hiddenStatus}
@@ -145,7 +146,8 @@ const Header = ({
         <button
           onClick={onYearSelect}
           type="button"
-          className={`Calendar__yearText ${isYearSelectorOpen ? 'Calendar__TextOpen' : ''}`}
+          className="Calendar__yearText"
+          data-status={isYearSelectorOpen ? 'Calendar__TextOpen' : ''}
           aria-label={isYearSelectorOpen ? closeYearSelector : openYearSelector}
           tabIndex={isActiveMonth ? '0' : '-1'}
           {...hiddenStatus}

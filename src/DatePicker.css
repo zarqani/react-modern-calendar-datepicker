@@ -659,13 +659,20 @@
   border-top: 0 none;
   border-left: 0 none;
   position: absolute;
-  top: 12px;
+  transition: all 0.5s;
+  top: 10px;
   left: 10px;
 }
 
-.Calendar__TextOpen::after {
+.Calendar__monthText:hover,
+.Calendar.-rtl .Calendar__monthText:hover,
+.Calendar__yearText:hover {
+  transform: translateX(0) scale(0.95);
+}
+
+[data-status='Calendar__TextOpen']::after {
   transform: rotate(-135deg);
-  /* border: 1px solid #00f; */
+  top: 12px;
 }
 
 @keyframes fadeCalendar {
