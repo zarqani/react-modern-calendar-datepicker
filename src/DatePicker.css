@@ -634,6 +634,39 @@
   position: relative;
   z-index: 1;
 }
+/* add new style */
+
+.Calendar__yearText,
+.Calendar__monthText {
+  width: 103px;
+  height: 32px;
+  background: #f0f0f0 !important;
+  margin: 0 2px !important;
+  font-size: 16px !important;
+  line-height: 18px;
+  color: #000d4b;
+  position: relative;
+  padding-left: 30px !important;
+}
+
+.Calendar__yearText::after,
+.Calendar__monthText::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000d4b;
+  transform: rotate(45deg);
+  border-top: 0 none;
+  border-left: 0 none;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+
+.Calendar__TextOpen::after {
+  transform: rotate(-135deg);
+  /* border: 1px solid #00f; */
+}
 
 @keyframes fadeCalendar {
   from {
